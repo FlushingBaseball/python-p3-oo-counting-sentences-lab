@@ -37,6 +37,10 @@ class MyString:
     print(without_spaces)
     sentance_array = re.split("[!?\.]+", without_spaces) 
     print(sentance_array)
-    return(len(sentance_array)-1)
+    for sentance in sentance_array:
+      if sentance ==(""):
+        sentance_array.remove(sentance)
+    print(sentance_array)
+    return(len(sentance_array))
 
   value = property(get_value, set_value)
